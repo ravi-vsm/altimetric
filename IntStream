@@ -1,0 +1,48 @@
+IntStream is a specialized stream in Java for handling primitive int values. 
+-----------------------------------------------------------------------------
+methods::
+-------
+
+range(int startInclusive, int endExclusive): Creates an ordered stream of int values starting from startInclusive (inclusive) up to endExclusive (exclusive).
+
+rangeClosed(int startInclusive, int endInclusive): Similar to range, but the endInclusive value is included in the stream.
+
+of(int... values): Creates an IntStream from an array of int values.
+
+forEach(IntConsumer action): Performs an action for each element in the stream.
+
+mapToInt(IntUnaryOperator mapper): Transforms each element in the stream using the provided mapper.
+
+sum(): Computes the sum of all elements in the stream.
+
+average(): Computes the average of all elements in the stream as an OptionalDouble.
+
+min(): Finds the minimum element in the stream as an OptionalInt.
+
+max(): Finds the maximum element in the stream as an OptionalInt.
+
+count(): Returns the count of elements in the stream as a long.
+
+distinct(): Returns a stream consisting of distinct elements in the same order as the original.
+
+filter(IntPredicate predicate): Filters the stream based on a predicate.
+
+sorted(): Sorts the elements in natural order.
+
+boxed(): Converts the IntStream to a regular Stream<Integer>.
+
+toArray(): Converts the IntStream into an array of int values.
+
+reduce(int identity, IntBinaryOperator op): Performs a reduction on the elements in the stream using the given identity value and operator.
+
+anyMatch(IntPredicate predicate): Returns true if any element in the stream matches the given predicate.
+
+allMatch(IntPredicate predicate): Returns true if all elements in the stream match the given predicate.
+
+noneMatch(IntPredicate predicate): Returns true if none of the elements in the stream match the given predicate.
+
+findFirst(): Returns an OptionalInt containing the first element in the stream.
+
+limit(long maxSize): Limits the stream to at most maxSize elements.
+
+skip(long n): Skips the first n elements in the stream.
